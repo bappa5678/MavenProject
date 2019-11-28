@@ -1,0 +1,12 @@
+<suite name='test Maven Suite'>
+<test name = 'test Maven Testng'>
+
+<packages>
+
+<package name='com.qa.base.*' >
+
+</package>
+</packages>
+</test>
+
+</suite>

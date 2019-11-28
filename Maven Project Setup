@@ -1,0 +1,88 @@
+maven+ Testng+Selenium
+
+1: https://www.mkyong.com/ and search "How to install Maven on Windows"  and follow the steps to do necessery environment setup.
+2: create a maven project in eclipse and in the POM.xml add the necessery dependency.
+3: If any dependency is not download properly or to rebuild the project go to "Run As--> Maven Build--> In the Goal field enter the commant ' clean install'  and click Run button. 
+In the console it will download all dependencies again and display the BUILD SUCCESS message
+4: Create your test class
+5: To execute right click on project--> Run As-->Maven Test
+6: To execue from commandprompt go to the project directory and open command prompt
+7: Execute the command 'mvn clean install'. it will execute the maven life cycle.. 1: Compile 2: Test resources 3: Test Compile 4: execute the test cases.
+ It will generate the build in form of Jar. The test is happening via surefire plugin. Compile is happening via Compilire plugin. 
+8: If you dont want to build again and again, just want to directly execute test cases the execute the command 'mvn test'
+9: If you just want to generate the build, not execute the test cases then execute the command 'mvn package -DskipTests' 
+Another way to skip the test cases is to execute the command 'mvn package -Dmaven.test.skip=true'  .  
+To execute this command, add the property in the pom file properties section
+<properties>
+<maven.test.skip>true</maven.test.skip>
+</properties>
+10: If any error come in the projet then right click on the project -->Maven-->Update Project-->Click OK.
+11: If you keep the maven.test.skip= true it will always skip the test cases. So keep it false
+12; If there are multiple classes and the maven is executing only one class, the some extra configration is required.
+
+In the POM.xml add the below plugins.
+
+  
+  
+   <build>
+<plugins>
+
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven.compiler.plugin</artifactId>
+<configuration>
+<source>1.6</source>
+<target>1.6</target>
+</configuration>
+</plugin>
+
+
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven.surefire.plugin</artifactId>
+<version>2.19.1</version>
+<configuration>
+<SuiteXmlFiles>
+<SuiteXmlFile> src.main/resources/testng.xml </SuiteXmlFile>
+</SuiteXmlFiles>
+</configuration>
+</plugin>
+
+
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven.source.plugin</artifactId>
+<executions>
+<execution>
+<id> attach-sources</id>
+<goals>
+<goal>jar</goal>
+</goals>
+</execution>
+</executions>
+</plugin>
+
+
+  
+  
+
+
+Right click on the project and create another 'source' folder 'src/main/resources' and click finish.
+ Create one testng.xml file . The file content is given below. 'give the page name where all your tests belongs'
+
+<suite name='test Maven Suite'>
+<test name = 'test Maven Testng'>
+<packages>
+<package name='com.qa.base.*' >
+</package>
+</packages>
+</test>
+</suite>
+
+
+
+
+
+
+
+

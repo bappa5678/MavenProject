@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="34984" started-at="2019-11-28T20:26:03Z" finished-at="2019-11-28T20:26:37Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="34984" started-at="2019-11-28T20:26:03Z" finished-at="2019-11-28T20:26:37Z">
+      <class name="com.qa.base.TestBase1">
+        <test-method status="PASS" signature="test1()[pri:0, instance:com.qa.base.TestBase1@2acf57e3]" name="test1" duration-ms="10574" started-at="2019-11-28T20:26:15Z" finished-at="2019-11-28T20:26:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+      </class> <!-- com.qa.base.TestBase1 -->
+      <class name="com.qa.base.TestBase2">
+        <test-method status="PASS" signature="test()[pri:0, instance:com.qa.base.TestBase2@506e6d5e]" name="test" duration-ms="11507" started-at="2019-11-28T20:26:26Z" finished-at="2019-11-28T20:26:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+      </class> <!-- com.qa.base.TestBase2 -->
+      <class name="com.qa.base.TestBase">
+        <test-method status="PASS" signature="test()[pri:0, instance:com.qa.base.TestBase@2812cbfa]" name="test" duration-ms="12854" started-at="2019-11-28T20:26:03Z" finished-at="2019-11-28T20:26:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+      </class> <!-- com.qa.base.TestBase -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>
