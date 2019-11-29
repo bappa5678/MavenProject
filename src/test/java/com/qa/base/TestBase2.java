@@ -24,8 +24,9 @@ public class TestBase2 {
 		// System.out.println(resp.getStatusCode());
 
 		System.out.println("This is before webdriver");
+		String driverPath= System.getProperty("user.dir");
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\DELL\\Desktop\\EclipseWorkspace\\chromedriver v78\\chromedriver.exe");
+		driverPath+ "\\Drivers\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 
 		try {
