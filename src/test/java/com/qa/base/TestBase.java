@@ -24,9 +24,9 @@ public class TestBase {
 		// System.out.println(resp.getStatusCode());
 
 		System.out.println("This is before webdriver");
-		String driverPath= System.getProperty("user.dir");
+		String projectPath= System.getProperty("user.dir");
 		System.setProperty("webdriver.chrome.driver",
-				driverPath+ "\\Drivers\\chromedriver_win32\\chromedriver.exe");
+				projectPath+ "\\Drivers\\chromedriver_win32\\chromedriver.exe");
 		
 		
 		WebDriver driver = new ChromeDriver();
@@ -47,7 +47,7 @@ public class TestBase {
 					.sendKeys("Selenium  abdjhdsgksjhgk");
 			driver.findElement(By.xpath("//*[@id=\"tsf\"]/div[2]/div[1]/div[3]/center/input[1]")).click();
 			Thread.sleep(5000);
-			takeSnapShot(driver, "C:\\Users\\28693\\Desktop\\snapshot\\test.jpeg");
+			takeSnapShot(driver, projectPath+"\\snapshot\\test.jpeg");
 
 			System.out.println("After google Launch");
 			driver.quit();
